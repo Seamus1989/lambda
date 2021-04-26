@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "bundle": "esbuild index.ts --bundle --minify --platform=node --target=node12 --external:aws-sdk --outfile=../build/api/index.js"
+    "clean": "rm -rf node_modules",
+    "bundle": "concurrently 'yarn:bundle:*'",
+    "bundle:lambda": "esbuild index.ts --bundle --minify --platform=node --target=node12 --external:aws-sdk --outfile=../build/api/index.js",
+    "bundle:photos": "esbuild get-photos-index.ts --bundle --minify --platform=node --target=node12 --external:aws-sdk --outfile=../build/api/get-photos-index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
     "aws-sdk": "^2.882.0",
+    "concurrently": "^6.0.2",
     "esbuild": "0",
     "eslint": "^7.23.0",
     "eslint-config-standard": "^16.0.2",

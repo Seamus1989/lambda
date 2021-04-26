@@ -9,13 +9,12 @@
     "watch": "tsc -w",
     "test": "jest",
     "deploy": "cdk deploy",
-    "cdk": "cdk"
+    "clean": "rm -rf node_modules",
+    "diff": "cdk diff"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.97.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "aws-cdk": "1.97.0",
     "esbuild": "0",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
@@ -23,9 +22,14 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/assert": "^1.97.0",
+    "@aws-cdk/aws-iam": "^1.97.0",
     "@aws-cdk/aws-lambda": "^1.97.0",
     "@aws-cdk/aws-lambda-nodejs": "^1.97.0",
-    "@aws-cdk/core": "1.97.0",
+    "@aws-cdk/aws-s3": "^1.97.0",
+    "@aws-cdk/aws-s3-deployment": "^1.97.0",
+    "@aws-cdk/core": "^1.97.0",
+    "aws-cdk": "^1.97.0",
     "source-map-support": "^0.5.16"
   }
 }
