@@ -10,6 +10,8 @@
     "test": "jest",
     "deploy": "cdk deploy",
     "clean": "rm -rf node_modules",
+    "ballache": "upgrade",
+    "synth": "cdk synthesize --output=./templates",
     "diff": "cdk diff"
   },
   "devDependencies": {
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "@aws-cdk/assert": "^1.97.0",
+    "@aws-cdk/aws-apigateway": "^1.97.0",
     "@aws-cdk/aws-iam": "^1.97.0",
     "@aws-cdk/aws-lambda": "^1.97.0",
     "@aws-cdk/aws-lambda-nodejs": "^1.97.0",

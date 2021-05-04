@@ -1,0 +1,535 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "SimpleAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SimpleAppStack.template.json"
+      },
+      "metadata": {
+        "/SimpleAppStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53",
+              "id": "3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53",
+              "packaging": "zip",
+              "sourceHash": "3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53",
+              "s3BucketParameter": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3BucketFA57386D",
+              "s3KeyParameter": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3VersionKeyDB8EA971",
+              "artifactHashParameter": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53ArtifactHashB3F6DC7E"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:437:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316",
+              "id": "f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316",
+              "packaging": "zip",
+              "sourceHash": "f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316",
+              "s3BucketParameter": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3BucketA89953A3",
+              "s3KeyParameter": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3VersionKey03B4B9A4",
+              "artifactHashParameter": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316ArtifactHash1BDFEDDF"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:437:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/MySimpleAppBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MySimpleAppBucket6B59014A",
+            "trace": [
+              "new Bucket (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1331:22)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:16:20)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/my-lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mylambdaServiceRoleEF0A78B7",
+            "trace": [
+              "new Role (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:563:31)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/my-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mylambdaE03B2284",
+            "trace": [
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:625:35)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3BucketFA57386D",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3VersionKeyDB8EA971",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53ArtifactHashB3F6DC7E",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:32:32)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3BucketA89953A3",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3VersionKey03B4B9A4",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/AssetParameters/f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316ArtifactHash1BDFEDDF",
+            "trace": [
+              "new FileAssetParameters (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "SimpleAppStack.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack.ts:665:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:145:40)",
+              "AssetCode.bind (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:277:20)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:583:29)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/my-photo-lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myphotolambdaServiceRoleE687E185",
+            "trace": [
+              "new Role (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:563:31)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/my-photo-lambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myphotolambdaServiceRoleDefaultPolicyD1E23794",
+            "trace": [
+              "new Policy (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "NodejsFunction.addToRolePolicy (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:263:15)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:52:21)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/my-photo-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myphotolambda284973B1",
+            "trace": [
+              "new Function (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:625:35)",
+              "new NodejsFunction (/Users/Seamus/lambda/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:38:29)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/MySimpleAppBucketExport": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MySimpleAppBucketExport",
+            "trace": [
+              "new SimpleAppStack (/Users/Seamus/lambda/lib/simple-app-stack.ts:47:5)",
+              "Object.<anonymous> (/Users/Seamus/lambda/bin/simple-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Module.m._compile (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Seamus/lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/Seamus/lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1015:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)",
+              "Module.load (internal/modules/cjs/loader.js:879:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/SimpleAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/Seamus/lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/SimpleAppStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/Seamus/lambda/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/Seamus/lambda/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

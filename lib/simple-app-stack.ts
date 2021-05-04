@@ -5,15 +5,13 @@ import { Runtime } from '@aws-cdk/aws-lambda';
 import { Bucket, BucketEncryption } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import { PolicyStatement } from '@aws-cdk/aws-iam';
+import * as apigateway from "@aws-cdk/aws-apigateway";
 
 export class SimpleAppStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     // bundlers https://dev.to/seeebiii/5-ways-to-bundle-a-lambda-function-within-an-aws-cdk-construct-1e28
     // esbuild https://esbuild.github.io/getting-started/#your-first-bundle
-
-
-
 
 
     const bucket = new Bucket(this, 'MySimpleAppBucket', {
@@ -49,5 +47,14 @@ export class SimpleAppStack extends cdk.Stack {
 
     getPhotosLambda.addToRolePolicy(bucketPermissions)
     getPhotosLambda.addToRolePolicy(bucketContainerPermissions)
+
+    const api = new apigateway.LambdaRestApi(this, 'MySimpleApiGateway', {
+      handler: mainLambdaFunction,
+    })
+
+    new cdk.CfnOutput(this, 'MySimpleAppBucketExport', {
+      value: bucket.bucketName,
+      exportName: 'MySimpleAppBucketName',
+    })
   }
 }
