@@ -1,0 +1,513 @@
+{
+  "Resources": {
+    "MySimpleAppBucket6B59014A": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/MySimpleAppBucket/Resource"
+      }
+    },
+    "mylambdaServiceRoleEF0A78B7": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/my-lambda/ServiceRole/Resource"
+      }
+    },
+    "mylambdaE03B2284": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3BucketFA57386D"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3VersionKeyDB8EA971"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3VersionKeyDB8EA971"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "mylambdaServiceRoleEF0A78B7",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+          }
+        },
+        "Handler": "index.lambdaFunction",
+        "Runtime": "nodejs14.x"
+      },
+      "DependsOn": [
+        "mylambdaServiceRoleEF0A78B7"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/my-lambda/Resource",
+        "aws:asset:path": "asset.3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53",
+        "aws:asset:property": "Code"
+      }
+    },
+    "myphotolambdaServiceRoleE687E185": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/my-photo-lambda/ServiceRole/Resource"
+      }
+    },
+    "myphotolambdaServiceRoleDefaultPolicyD1E23794": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "MySimpleAppBucket6B59014A",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "s3:ListBucket",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "MySimpleAppBucket6B59014A",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "myphotolambdaServiceRoleDefaultPolicyD1E23794",
+        "Roles": [
+          {
+            "Ref": "myphotolambdaServiceRoleE687E185"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/my-photo-lambda/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "myphotolambda284973B1": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3BucketA89953A3"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3VersionKey03B4B9A4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3VersionKey03B4B9A4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "myphotolambdaServiceRoleE687E185",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "PHOTO_BUCKET_NAME": {
+              "Ref": "MySimpleAppBucket6B59014A"
+            },
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+          }
+        },
+        "Handler": "index.photoLambdaFunction",
+        "Runtime": "nodejs14.x"
+      },
+      "DependsOn": [
+        "myphotolambdaServiceRoleDefaultPolicyD1E23794",
+        "myphotolambdaServiceRoleE687E185"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/my-photo-lambda/Resource",
+        "aws:asset:path": "asset.f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAE02PzU7EMAyEn4W767bbEzegEke2Kk8QUlOlPwmKnV2hKO9Ok4LEacbR+POkxbZpsHl4Uneu9LTWUTtPGN9F6RV6Z1l80ALPzCTH42zsDCOxC14T9J92UF7tJOTzcA3yFSS7/5GDMhkxzibIVyJ3GF+CXqkkT5dgU/vHpCrrJloY34q8BqvzIhi1YxzdVnhFB7cZ/V0aFJeAu0rlloyl7C8Qj8QfJiXIeFy4vrUXbB+Pjy9sTOWDFbMTjqf+ALyZ0YAVAQAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "SimpleAppStack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3BucketFA57386D": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53\""
+    },
+    "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53S3VersionKeyDB8EA971": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53\""
+    },
+    "AssetParameters3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53ArtifactHashB3F6DC7E": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"3ccce327a7430063e1198e077140b6a2438743ea7d0e140328516702a8660d53\""
+    },
+    "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3BucketA89953A3": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316\""
+    },
+    "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316S3VersionKey03B4B9A4": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316\""
+    },
+    "AssetParametersf1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316ArtifactHash1BDFEDDF": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"f1fb5a76f93e3c90b564dce409525f5889da8b0608852d7b485a6031b3378316\""
+    }
+  },
+  "Outputs": {
+    "MySimpleAppBucketExport": {
+      "Value": {
+        "Ref": "MySimpleAppBucket6B59014A"
+      },
+      "Export": {
+        "Name": "MySimpleAppBucketName"
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "af-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
